@@ -1,0 +1,252 @@
+/*
+Theme Name: phase3ooo
+Theme URI: http://josefrenner.ch
+Description: Minimal theme with bare essentials, uses fullpage.js
+Version: 0.1
+Author: Josef Renner
+Date: March 2014
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/*
+  TODO 
+
+    + check occurance of color variables
+    - why does the text-size change when resizing windows?
+    + check heights 
+    + and widths
+    + and neccessity thereof
+    - styles for mobiles
+    - styles for tablets
+    - set up git
+*/
+
+/* colors */
+
+@back: #00f;
+@content-border: #D8D8D8;
+@textcolor: #fff;
+@content-strong: #fff;
+@metacolor: #666;
+@link: #0080FF;
+@link-hover: #A901DB;
+
+/* fonts */
+
+@title-font: arial;
+@paragraph-font: georgia;
+
+*, html {
+  margin:0;
+  padding:0;
+}
+
+// Clearfix für #rap, ev. auch storycontent (alles, was floats enthält)
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+
+/* apply natural box layout model to all elements */
+
+*:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: @textcolor;
+  font-family: @paragraph-font, serif;
+  background-color: @back;
+  font-size:16px;
+  line-height:1.125em;
+}
+
+#rap { /* wraps Header, Content, Sidebar and Footer */
+  border: 1px dashed #fff;
+}
+
+/* LINKS */
+
+a {
+  text-decoration: none;
+  color: @textcolor;
+}
+
+a:active, a:visited, a:hover {
+  text-decoration: none;
+  color: @textcolor;
+}
+
+/* HEADER */
+
+#header {
+  border: solid 1px @content-border;
+  margin:1em 0;
+  h1 {
+    font-size: 2.5em;
+    line-height:1.2em;
+    font-family: @title-font;
+  }
+  h2 {
+  }
+  a,a:hover {/*text-decoration: none;*/}
+}
+
+/* CONTENT */
+
+#content {
+  border: solid 1px yellow;
+  padding: 4em 0 0 10px;
+  .post {
+    margin-bottom: 2em;
+    h3.storytitle {  /*Post Titles*/
+      /*text-transform:uppercase;*/
+      font-family:arial;
+      font-size:2em;
+      a {
+        text-decoration: none;
+      }
+    }
+    .meta {
+      font-weight: normal;
+      font-size: 0.75em;
+      font-family: arial;
+      letter-spacing: 0.3px;
+      color: @metacolor;
+    }
+    .storycontent {
+      p {
+        font-size: 0.875em;
+        margin:0.5em 0;
+        letter-spacing: 0.02em;
+      }
+      blockquote{
+      }
+      strong, h2 {
+        color:@content-strong;
+      }
+      h3 {
+        font-size:0.875em;
+        line-height:0.9em;
+        /*color:@content-strong;*/
+        font-weight:bold;
+      }
+      em {
+      }
+      span {
+        color:#666;
+        font-size:1em;
+        font-weight:bold;
+      }
+      a {
+        text-decoration: none;
+        color:@link;
+      }
+      a:hover {
+        text-decoration: underline;
+        color:@link-hover;
+      }
+      ul {
+        margin-top:0.875em;
+        list-style:none;
+        margin-bottom:2em;
+        font-style:italic;
+        li:before {content:"◊";margin-right:0.5em;}
+      }
+    }
+  }
+}
+
+// alle Seiten auf einmal
+
+.section {
+}
+
+// .all_pages_nav {
+  // 	z-index: 3;
+  // 	list-style: none;
+  // 	position: fixed;
+  // 	top: 0px; left: 200px;
+  // 	padding: 10px;
+  // 	li {
+    // 		a {
+      // 			text-decoration: none;
+      // 			font-weight: bold;
+      // 			color: #fff;
+    // 		}
+    // 		a:hover {
+      // 			color: #ee0000;
+    // 		}
+  // 	}
+// }
+// 
+
+.all_pages_at_once {
+  .page_box {
+    //border: 1px solid white;
+    position:absolute;
+    top:0;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+/* Images */
+
+.storycontent img {border:1px solid #000;}
+.alignnone {margin:0;}
+.alignleft {float:left; margin: 0 25px 22px 0;}
+.alignright {float:right; margin: 0 0 22px 25px;}
+.aligncenter {text-align: center;}
+
+/* NAVIGATION */
+
+.wp_nav {
+  position: fixed;
+  top: 0; left: 0;
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 2em;
+  li {
+    text-transform: uppercase;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: #b00000;
+    }
+    a:hover {
+      color: #ee0000;
+    }
+  }
+}
+
+/* FOOTER */
+
+.credit {
+  clear: both;
+  color: @metacolor;
+  font-size: 0.75em;
+  letter-spacing: 0.2px;
+  padding: 3em 0 0 0;
+  text-align: center;
+  /*	a {color:;}
+  a:hover {color:;}*/
+} 

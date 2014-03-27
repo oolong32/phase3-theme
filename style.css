@@ -1,0 +1,209 @@
+/*
+Theme Name: phase3ooo
+Theme URI: http://josefrenner.ch
+Description: Minimal theme with bare essentials, uses fullpage.js
+Version: 0.1
+Author: Josef Renner
+Date: March 2014
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+*/
+/*
+  TODO 
+
+    + check occurance of color variables
+    - why does the text-size change when resizing windows?
+    + check heights 
+    + and widths
+    + and neccessity thereof
+    - styles for mobiles
+    - styles for tablets
+    - set up git
+*/
+/* colors */
+/*also rap-border*/
+/* sidebar ul ul, .content .meta,  footer (?) */
+/* fonts */
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+/* apply natural box layout model to all elements */
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color: #ffffff;
+  font-family: georgia, serif;
+  background-color: #0000ff;
+  font-size: 16px;
+  line-height: 1.125em;
+}
+#rap {
+  /* wraps Header, Content, Sidebar and Footer */
+  border: 1px dashed #fff;
+}
+/* LINKS */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* HEADER */
+#header {
+  border: solid 1px #d8d8d8;
+  margin: 1em 0;
+}
+#header h1 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+  font-family: arial;
+}
+#header a,
+#header a:hover {
+  /*text-decoration: none;*/
+}
+/* CONTENT */
+#content {
+  border: solid 1px yellow;
+  padding: 4em 0 0 10px;
+}
+#content .post {
+  margin-bottom: 2em;
+}
+#content .post h3.storytitle {
+  /*Post Titles*/
+  /*text-transform:uppercase;*/
+  font-family: arial;
+  font-size: 2em;
+}
+#content .post h3.storytitle a {
+  text-decoration: none;
+}
+#content .post .meta {
+  font-weight: normal;
+  font-size: 0.75em;
+  font-family: arial;
+  letter-spacing: 0.3px;
+  color: #666666;
+}
+#content .post .storycontent p {
+  font-size: 0.875em;
+  margin: 0.5em 0;
+  letter-spacing: 0.02em;
+}
+#content .post .storycontent strong,
+#content .post .storycontent h2 {
+  color: #ffffff;
+}
+#content .post .storycontent h3 {
+  font-size: 0.875em;
+  line-height: 0.9em;
+  /*color:@content-strong;*/
+  font-weight: bold;
+}
+#content .post .storycontent span {
+  color: #666;
+  font-size: 1em;
+  font-weight: bold;
+}
+#content .post .storycontent a {
+  text-decoration: none;
+  color: #0080ff;
+}
+#content .post .storycontent a:hover {
+  text-decoration: underline;
+  color: #a901db;
+}
+#content .post .storycontent ul {
+  margin-top: 0.875em;
+  list-style: none;
+  margin-bottom: 2em;
+  font-style: italic;
+}
+#content .post .storycontent ul li:before {
+  content: "◊";
+  margin-right: 0.5em;
+}
+.all_pages_at_once .page_box {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* Images */
+.storycontent img {
+  border: 1px solid #000;
+}
+.alignnone {
+  margin: 0;
+}
+.alignleft {
+  float: left;
+  margin: 0 25px 22px 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 22px 25px;
+}
+.aligncenter {
+  text-align: center;
+}
+/* NAVIGATION */
+.wp_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 2em;
+}
+.wp_nav li {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.wp_nav li a {
+  text-decoration: none;
+  color: #b00000;
+}
+.wp_nav li a:hover {
+  color: #ee0000;
+}
+/* FOOTER */
+.credit {
+  clear: both;
+  color: #666666;
+  font-size: 0.75em;
+  letter-spacing: 0.2px;
+  padding: 3em 0 0 0;
+  text-align: center;
+  /*	a {color:;}
+  a:hover {color:;}*/
+}
